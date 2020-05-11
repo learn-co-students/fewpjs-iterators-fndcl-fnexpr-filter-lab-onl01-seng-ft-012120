@@ -9,7 +9,23 @@ return driver
 };
 
 function fuzzyMatch(drivers,string){
-    return drivers.filter(driv=> {
-      driv.toLowerCase().charAt(0) === string;
-    }); 
-  }
+
+return drivers.filter(driv => {
+//   console.log("ourDriver",driv);
+    return  driv.toLowerCase().indexOf(string.toLowerCase()) === 0 
+     
+})
+}
+
+    function matchName(drivers,string){
+    return  drivers.filter(eachDriver => {
+     if(eachDriver.name.toLowerCase() === string.toLowerCase()){
+      return ("matchElement",eachDriver.name);
+     }
+         
+     })
+     
+
+
+
+    }
